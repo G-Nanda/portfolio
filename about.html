@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="about.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+   
+    <title>About Me</title>
+</head>
+<body>
+    <!-- Add a button for the hamburger menu -->
+    <button class="hamburger-menu">&#9776;</button>
+    <nav >
+                
+        <ul id="sidemenu">
+            
+            <li><a href="index.html"><span>H</span>OME</a></li>
+            <li><a href="about.html"><span>A</span>BOUT</a></li>
+            <li><a href="work.html"><span>P</span>ORTFOLIO</a></li>
+            <li><a href="contact.html"><span>C</span>ONTACT</a></li>
+            
+            
+        </ul>
+        
+    </nav>    
+    <center>
+        <h1 class="aboutme" style="color: #fff; text-align: center; "><span style="color:#ff004f;">A</span>bout <span style="color: #ff004f;">M</span>e</h1>
+    </center>
+    
+
+    <div class="block glow">
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    
+                    <img src="images/00.jpg" alt="ProfilePic">
+
+                    <div class="header-text">
+                       
+                        <h1 >Hi,I'm <span>Nanda G</span></h1>
+                    </div>
+
+                    
+                </div>
+            
+
+
+            <div class="about-col-2">
+                
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p> <i class="fas tab-icon active-link" onclick="opentab('skills')">&#xf5fc;</i>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p><i class="fas tab-icon" onclick="opentab('experience')">	&#xf0b1;</i>
+                    <p class="tab-links" onclick="opentab('education')">Education</p><i class="fas tab-icon" onclick="opentab('education')">&#xf19d;</i>
+                    <p class="tab-links" onclick="opentab('Achievements')">Achievements</p><i class="fas tab-icon" onclick="opentab('Achievements')">&#xf559;</i>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        
+                        
+                        <li><span class="tit-desc">Internet Of Things</span><br> <h1 class="desc">Deploying smart Technologies </h1></li>
+                        
+                        <li><span class="tit-desc">Web Development</span><br> <h1 class="desc">Developing websites using HTML,CSS,JS </h1> </li>
+                        <li><span class="tit-desc">App Development</span><br> <h1 class="desc">Building Android apps using Flutter </h1></li>
+                        <li><span class="tit-desc">Programming languages</span><br> <h1 class="desc">C and Python </h1></li>
+                        <li style="font-size: larger;padding-top: 25px;"> <span><a style="color: blue;" href="work.html">Click here to explore my works</a></span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span class="tit-desc">Internship in OASYS Cybernetics Pvt.Ltd</span><br>
+                         <h1 class="desc">Developed projects on IOT using Arduino.</h1>
+                            </li>
+
+                            <li><span class="tit-desc">Internship in NSIC TECHNICAL SERVICES CENTRE </span><br>
+                                <h1 class="desc">Done some IOT experiments using Raspberry Pi. </h1>
+                                  </li>
+                        
+                        
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span class="tit-desc">2021 - 2025</span><br> <h1 class="desc" >Bachelors of Engineering Degree in the dept of ECE From R.M.K College Of Engineering And Technology </h1> </li>
+                        <li><span class="tit-desc">2021</span><br><h1 class="desc">HSC From J.R.K Matriculation Higher Secondary School,Chennai </h1></li> 
+                        <li><span class="tit-desc">2019</span><br> <h1 class="desc">SSLC From J.R.K Matriculation Higher Secondary School,Chennai </h1></li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="Achievements">
+                    <ul>
+                        <li><span class="tit-desc">NationalLevelHackathon </span><br><h1 class="desc">Selected as a second runner up in National level hackathon organized by Cybrom Technologies Pvt Ltd at Oriental Institute of Science and Technology, Bhopal on October 13 and 14.</h1></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="bottom">
+        <ul>
+            <li class="list">
+                <a href="index.html">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="text">Home</span>
+                </a>
+
+            </li>
+
+            <li class="list active">
+                <a href="about.html">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="text">About</span>
+                </a>
+
+            </li>
+
+            <li class="list">
+                <a href="work.html">
+                    <span class="icon">
+                        <ion-icon name="folder-outline"></ion-icon>
+                    </span>
+                    <span class="text">Portfolio</span>
+                </a>
+
+            </li>
+
+            <li class="list">
+                <a href="contact.html">
+                    <span class="icon">
+                        <ion-icon name="call-outline"></ion-icon>
+                    </span>
+                    <span class="text">Contact</span>
+                </a>
+
+            </li>
+            <div class="indicator"></div>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+</body>
+<script>
+    // JavaScript to toggle the "active" class on the hamburger menu button
+document.querySelector('.hamburger-menu').addEventListener('click', function() {
+  this.classList.toggle('active');
+});
+
+</script>
+
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname)
+    {
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<script>
+const list = document.querySelectorAll('.list');
+function activeLink(){
+    list.forEach((item)=>
+    item.classList.remove('active'));
+    this.classList.add('active');
+}
+list.forEach((item)=>
+item.addEventListener('click',activeLink));
+</script>
+
+</html>

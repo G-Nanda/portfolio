@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-EDGE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    
+    <title>Home Page</title>
+
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            
+                <!-- Add a button for the hamburger menu -->
+                <button class="hamburger-menu">&#9776;</button>
+                <!-- Add the logo image -->
+
+
+            <nav >  
+                <ul id="sidemenu">
+                    
+                    <li><a href="index.html"><span>H</span>OME</a></li>
+                    <li><a href="about.html"><span>A</span>BOUT</a></li>
+                    <li><a href="work.html"><span>P</span>ORTFOLIO</a></li>
+                    <li><a href="contact.html"><span>C</span>ONTACT</a></li>
+                    
+                    
+                </ul>
+
+                
+                
+                
+            </nav>
+            <div class="logo">
+                <img src="images/logo4.png" alt="Logo">
+            </div>
+            <div class="header-text">
+                <h1><span>N</span>ANDA'<span>S</span> <span>P</span>ORT<span>F</span>OLIO</h1>
+                <!-- Add the description below the header text -->
+                <p style="color: azure;">Welcome to my tech realm! <br><br>I'm <span>Nanda G</span>, a tech enthusiast specializing in IoT, <br>cloud computing, web and app development. Join me <br> in crafting innovative solutions that redefine possibilities.</p>
+            </div>
+        </div>
+    
+    <div class="bottom">
+        <ul>
+            <li class="list active">
+                <a href="index.html">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="text">Home</span>
+                </a>
+
+            </li>
+
+            <li class="list">
+                <a href="about.html" >
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="text">About</span>
+                </a>
+
+            </li>
+
+            <li class="list">
+                <a href="work.html">
+                    <span class="icon">
+                        <ion-icon name="folder-outline"></ion-icon>
+                    </span>
+                    <span class="text">Portfolio</span>
+                </a>
+
+            </li>
+
+            <li class="list">
+                <a href="contact.html">
+                    <span class="icon">
+                        <ion-icon name="call-outline"></ion-icon>
+                    </span>
+                    <span class="text">Contact</span>
+                </a>
+
+            </li>
+            <div class="indicator"></div>
+            
+        </ul>
+    </div>
+</div>
+    
+
+
+
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>   
+    
+    
+</body>
+
+
+<script>
+    const list = document.querySelectorAll('.list');
+    function activeLink(){
+        list.forEach((item)=>
+        item.classList.remove('active'));
+        this.classList.add('active');
+    }
+    list.forEach((item)=>
+    item.addEventListener('click',activeLink));
+</script>
+
+
+<script>
+    // JavaScript to toggle the "active" class on the hamburger menu button
+document.querySelector('.hamburger-menu').addEventListener('click', function() {
+  this.classList.toggle('active');
+});
+
+</script>
+</html>

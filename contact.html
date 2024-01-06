@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+        
+        <link rel="stylesheet" href="contact.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Contact</title>
+    </head>
+    <body>
+        
+        <div id="contact">
+            <!-- Add a button for the hamburger menu -->
+        <button class="hamburger-menu">&#9776;</button>
+        
+           <nav >
+                
+                <ul id="sidemenu">
+                    
+                    <li><a href="index.html"><span style="color: #ff004f;">H</span>OME</a></li>
+                    <li><a href="about.html"><span style="color: #ff004f;">A</span>BOUT</a></li>
+                    <li><a href="work.html"><span style="color: #ff004f;">P</span>ORTFOLIO</a></li>
+                    <li><a href="contact.html"><span style="color: #ff004f;">C</span>ONTACT</a></li>
+                    
+                    
+                </ul>
+                
+                
+            </nav>
+            
+        
+            <h1 class="header-text" ><span style="color:  #ff004f;">C</span>ontact <span style="color:  #ff004f;">M</span>e</h1>
+            
+            <div class="row">
+                <center>
+            <div class="block glow">
+                <div class="contact-left">
+                    
+                    <p class="data"> <a href="mailto:nandag2203@gmail.com"><i class="fa-solid fa-paper-plane"></i></a>nandag2203@gmail.com</p>
+                    <p class="data"><i class="fa-solid fa-phone"></i>9344492308</p>
+                    <div class="social-icons">
+                        
+                        <a href="https://www.linkedin.com/in/nanda-g-163812231"><i class="fa-brands fa-linkedin" id="linkedin"></i></a>
+                        <a href="https://github.com/G-Nanda"><i class="fa-brands fa-github" id="github"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100033933546026&mibextid=ZbWKwL"><i class="fa-brands fa-facebook" id="facebook"></i></a>
+                        <a href="https://instagram.com/_.nanda_007._?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D "><i class="fa-brands fa-instagram" id="instagram"></i></a>
+                        
+                    </div>
+                    <a style="font-size: 10px;" href="images/Resume.pdf" download class= "btn btn2">Download Resume</a>
+                </div>
+
+                
+                
+            </div>
+        </center>
+
+        
+            <h1 class="header-text" ><span style="color:  #ff004f;">C</span>ontact <span style="color:  #ff004f;">F</span>orm</h1>
+            <center>
+            <div class="block glow form" >
+                <form name="submit-to-google-sheet" >
+                    
+                        <input type="text" name="Name" placeholder="Your Name"  required> 
+                  
+                        <input type="Email" name="Email" placeholder="Your Email"  required> 
+                    
+                   
+                        <textarea name="Message"  rows="6" placeholder="Your message"  ></textarea> 
+                    
+                        
+                        <button type="submit" class="btn btn2">Submit</button>
+                    
+                </form>
+                <span id="msg">Have a nice day</span>
+                
+            </div>
+        </center>
+        <div class="bottom">
+            <ul>
+                <li class="list">
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Home</span>
+                    </a>
+    
+                </li>
+    
+                <li class="list">
+                    <a href="about.html">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text">About</span>
+                    </a>
+    
+                </li>
+    
+                <li class="list">
+                    <a href="work.html">
+                        <span class="icon">
+                            <ion-icon name="folder-outline"></ion-icon>
+                        </span>
+                        <span class="text">Portfolio</span>
+                    </a>
+    
+                </li>
+    
+                <li class="list active">
+                    <a href="contact.html">
+                        <span class="icon">
+                            <ion-icon name="call-outline"></ion-icon>
+                        </span>
+                        <span class="text">Contact</span>
+                    </a>
+    
+                </li>
+                <div class="indicator"></div>
+                
+            </ul>
+        </div>
+        </div>
+            
+            
+
+        </div>
+
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbyZRwJjuBOGXxg11RlEkEWzTWhK6Zc8aZLja42otut6ZbSUSPO9w2ODK74Adv8YZhx4_Q/exec'
+                const form = document.forms['submit-to-google-sheet']
+                const msg=document.getElementById("msg")
+              
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        msg.innerHTML="Message sent successfully"
+                        setTimeout(function(){
+                            msg.innerHTML=""
+                        },5000)
+                        form.reset()
+                    })
+                    .catch(error => console.error('Error!', error.message))
+                })
+              </script>
+        
+    </body>
+    <script>
+        // JavaScript to toggle the "active" class on the hamburger menu button
+    document.querySelector('.hamburger-menu').addEventListener('click', function() {
+      this.classList.toggle('active');
+    });
+</script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item)=>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item)=>
+        item.addEventListener('click',activeLink));
+    </script>
+    
+    
+    </html>

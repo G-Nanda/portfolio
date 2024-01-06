@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="contact.html">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo1.jpg" class="logo">
+                <ul id="sidemenu">
+                    
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    
+                    
+                </ul>
+                
+            </nav>
+            <div class="header-text">
+                <p>1-UI Designer<br>2-Web developer<br>3-Android/IOS App Developer</p>
+                <h1>Hi,I'm <span>Nanda G</span><br> From India</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ----------about---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/00.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title" >About Me</h1>
+                    <p>Passionate coder crafting elegant solutions through lines of code. Innovator and problem solver, turning ideas into functional realities. Lifelong learner exploring the ever-evolving tech landscape. Enthusiast of clean design and user-centric experiences. Adept at multiple languages and frameworks. Collaborative team player valuing communication and collective growth. Adaptable troubleshooter embracing challenges. </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Web/App Development </li>
+                            <li><span>App Development</span><br>Building Android apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>I'm a Student</span><br>No Job Experience As of now<br>But very eager to work as a Developer</li>
+                            
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021 - 2025</span><br>Bachelors of Engineering Degree in the dept of ECE From R.M.K College Of Engineering And Technology</li>
+                            <li><span>2021</span><br>HSC From J.R.K Matriculation Higher Secondary School,Chennai</li> 
+                            <li><span>2019</span><br>SSLC From J.R.K Matriculation Higher Secondary School,Chennai</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ---------portfolio-------- -->
+
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/wKvio9OmcxVUY5wy-DaH2OCmN5-lJ4uVaZo0fB2tNJs=_plaintext_638286485078051605.jpg">
+                    <div class="layer">
+                        <h3>BMI Calculator App</h3>
+                        <p>Experience the BMI Calculator a project showcasing my coding skills. Seamlessly designed and functional, it calculates Body Mass Index, providing insights into health. Witness my proficiency in web development as I combine user-friendly interfaces with accurate algorithms for a meaningful digital experience.</p>
+                        <a href="BMIAPP.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+
+                </div>
+                <div class="work">
+                    <img src="images/S8J_IflGj6jUpnxScumDb67AcKY7KEsdvQpprkVoDfQ=_plaintext_638286485086720059.jpg">
+                    <div class="layer">
+                        <h3>TO DO APP</h3>
+                        <p>Presenting my innovative take on task management: a sleek and intuitive To-Do app. Seamlessly plan, organize, and track tasks. User-friendly interface, dynamic updates, and cross-platform accessibility for ultimate productivity. Experience efficiency at your fingertips</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/IMG-20230826-WA0028.jpg">
+                    <div class="layer">
+                        <h3>Attendance Management App</h3>
+                        <p>Streamline attendance tracking with my Attendance Management App. Effortlessly manage employee presence, absences, and schedules in a user-friendly interface. Boost productivity and enhance record-keeping for seamless workforce management.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- -----Contact------- -->
+
+   
+        <div class="copyright">
+            <p>Empowering Creativity, Inspiring Innovation, and Enriching Experiences &copy Nanda. All Rights Reserved.</p>
+        </div>
+   
+    
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname)
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+    </script>
+
+    <script>
+        var side=document.getElementById(sidemenu);
+
+
+        function openmenu()
+        {
+            side.style.right="0";
+        }
+
+        function closemenu(){
+            side.style.right="-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyZRwJjuBOGXxg11RlEkEWzTWhK6Zc8aZLja42otut6ZbSUSPO9w2ODK74Adv8YZhx4_Q/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
