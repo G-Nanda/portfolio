@@ -6,6 +6,10 @@
 
 }
 
+body{
+    color: #fff;
+}
+
 .content{
     background: #000;
     height: 100vh;
@@ -13,21 +17,234 @@
 .bottom{
     display: none;
 
+}
 
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    margin-top: 10px;
+    
+}
+
+.logo1{
+    display: block;
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    margin-left: 20px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a{
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    /* margin-left: 35px; */
+    margin-right: 50px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop 0.8s ease forwards;
+    animation-delay:calc(.2s * var(--i));
+}
+
+.navbar a.active1{
+    color: #ff004f;
+}
+
+/* KEYFRAME ANIMATION */
+
+@keyframes slideRight {
+    0%{
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideTop {
+    0%{
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+    
+}
+
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+        
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+       
+    }
+    
+    
+}
+
+
+@keyframes ZoomIn {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+        
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+       
+    }
+    
+    
+}
+
+@keyframes floatImg {
+    0%{
+        transform: translateY(0);
+    } 
+    50%{
+        transform: translateY(-5px);
+    }  
+    100%{
+        transform: translateY(0);
+    }     
+}
+
+
+
+
+
+
+
+
+
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    
+     display: flex;
+    
+    align-items: center; 
+    padding: 80px 10% ;
 
 }
+
+
+.home-img img{
+    display: block;
+    max-width: 450px;
+    height: 400px;
+    border-radius: 25px;
+    opacity: 0;
+    animation: ZoomIn 1s ease forwards, floatImg 4s ease-in-out infinite;
+    animation-delay: .9s,3s;
+     
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+/* 
+.home-content h2{
+    color: #fff;
+    position: absolute;
+    top: 57%;
+    left: 35%;
+    font-family: azonix;
+    
+    z-index: 1;
+    font-size: 30px;
+    text-align: center;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}  */
+
+
+
+.home-content h3{
+    font-size: 32px;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+    margin-bottom: 30px;
+    
+} 
+
+
+.home-content h1{
+    
+    font-size: 53px;
+    font-weight: 600;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
+    margin-bottom: 30px;
+} 
+
+.home-content h1:nth-of-type(2){
+    margin-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+ .home-content p {
+    font-size: 20px;
+
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
+} 
+
+
+
+
+
+
+
+
 span{
     color: #ff004f;
 }
-nav{
+/* nav{
     padding-top: 25px;
-}
+} */
 
 .logo{
     display: none;
 }
 
-.content h1{
+/* .content h1{
     color: #fff;
     position: absolute;
     top: 35%;
@@ -37,11 +254,11 @@ nav{
     z-index: 1;
     font-size: 80px;
     text-align: center;
-}
+} */
 
 /* ... (previous styles) */
 
-.content p {
+/* .content p {
     color: #fff;
     position: absolute;
     top: 50%;
@@ -51,9 +268,9 @@ nav{
     z-index: 1;
     font-size: 25px;
     text-align: center;
-    width: 80%; /* Adjust the width as needed */
-    max-width: 600px; /* Example maximum width */
-}
+    width: 80%; 
+    max-width: 600px; 
+} */
 
 .box ul li{
     position: absolute;
@@ -115,18 +332,19 @@ nav{
 }
 
 
-nav ul li{
+ .navbar ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    
+    font-weight: 700;
 }
-nav ul li a{
+.navbar ul li a{
     color: #fff;
     text-decoration: none;
     font-size: 18px;
     position: relative;
 }
-nav ul li a::after{
+.navbar ul li a::after{
     content: '';
     width: 0;
     height: 3px;
@@ -136,12 +354,12 @@ nav ul li a::after{
     bottom: -6px;
     transition: 0.5s;
 }
-nav ul li a:hover::after{
+.navbar ul li a:hover::after{
     width: 100%;
     
-}
+} 
 
-
+/* 
 .header-text{
     margin-top: 15%;
     font-size: 30px;
@@ -174,7 +392,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap:wrap ;
-}
+} */
 
 /* New styles for the hamburger menu button */
 .hamburger-menu {
@@ -198,6 +416,7 @@ nav{
     }
 
     .logo {
+        margin-top: 20px;
         position: absolute;
         top: 10px;
         left: 50%;
@@ -205,6 +424,65 @@ nav{
         display: block;
         
     }
+
+    .home-img img{
+        display: none;
+    }
+
+    .logo1{
+        display: none;
+    }
+
+    .home{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+
+    }
+
+    .home-content h3{
+        font-size: 22px;
+        font-weight: 500;
+  
+    } 
+
+
+    
+.home-content h1{
+    
+    font-size: 50px;
+    font-weight: 600;
+    
+} 
+
+.home-content h1:nth-of-type(2){
+    margin-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+ .home-content p {
+    font-size: 20px;
+
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     
         /* Style the logo image */
@@ -363,7 +641,7 @@ nav{
     nav{
         display: none;
     }
-    .header-text h1{
+    /* .header-text h1{
         font-size: 45px;
         
     }
@@ -382,7 +660,7 @@ nav{
     
     /* ... (previous styles) */
     
-    .content p {
+    /* .content p {
         color: #fff;
         position: absolute;
         top: 25%;
@@ -393,12 +671,142 @@ nav{
         z-index: 1;
         font-size:20px;
         text-align: center;
-        width: 80%; /* Adjust the width as needed */
-        max-width: 600px; /* Example maximum width */
-    }
+        width: 80%; 
+        max-width: 600px; 
+    } */ 
     
   }
   
+
+
+  @media screen and (min-width: 601px) and (max-width: 1024px){
+
+    
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    margin-top: 25px;
+    
+}
+
+.logo1{
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    margin-left: 10px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a{
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    /* margin-left: 35px; */
+    margin-right: 20px;
+    
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop 0.8s ease forwards;
+    animation-delay:calc(.2s * var(--i));
+}
+
+.navbar a:hover{
+    color: #ff004f;
+}
+.navbar a.active1{
+    color: #ff004f;
+}
+
+
+
+
+
+
+
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    
+     display: flex;
+    
+    align-items: center; 
+    padding: 45px 10% ;
+
+}
+
+
+.home-img img{
+    display: block;
+    max-width: 450px;
+    height: 380px;
+    border-radius: 25px;
+    opacity: 0;
+    animation: ZoomIn 1s ease forwards, floatImg 4s ease-in-out infinite;
+    animation-delay: .9s,3s;
+     
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+
+
+
+
+.home-content h3{
+    font-size: 24px;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+    margin-bottom: 30px;
+    
+} 
+
+
+.home-content h1{
+    
+    font-size: 40px;
+    font-weight: 600;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
+    margin-bottom: 30px;
+} 
+
+.home-content h1:nth-of-type(2){
+    margin-bottom: 30px;
+    
+}
+
+ .home-content p {
+    font-size: 15px;
+
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
+} 
+
+  }
 
 
 

@@ -91,6 +91,7 @@ nav ul li{
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
+    font-weight: 700;
 }
 nav ul li a{
     color: #fff;
@@ -98,6 +99,12 @@ nav ul li a{
     font-size: 18px;
     position: relative;
 }
+nav ul li a.active1{
+  
+    color: #ff004f;
+  
+  
+  }
 nav ul li a::after{
     content: '';
     width: 0;

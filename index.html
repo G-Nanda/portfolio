@@ -20,29 +20,62 @@
                 <!-- Add the logo image -->
 
 
-            <nav >  
-                <ul id="sidemenu">
-                    
-                    <li><a href="index.html"><span>H</span>OME</a></li>
-                    <li><a href="about.html"><span>A</span>BOUT</a></li>
-                    <li><a href="work.html"><span>P</span>ORTFOLIO</a></li>
-                    <li><a href="contact.html"><span>C</span>ONTACT</a></li>
-                    
-                    
-                </ul>
+            <header class="header">
 
-                
-                
-                
+                <a href="#" class="logo1"><span>N</span>ANDA'<span>S</span> <span>P</span>ORT<span>F</span>OLIO</a>
+
+
+
+            
+
+            <nav class="navbar">  
+
+
+                <ul id="sidemenu">
+
+                    
+                    <li><a href="index.html" style="--i:1;"  class="active1">HOME</a></li>
+                    <li><a href="about.html" style="--i:2;">ABOUT</a></li>
+                    <li><a href="work.html" style="--i:3;">PORTFOLIO</a></li>
+                    <li><a href="contact.html" style="--i:4;">CONTACT</a></li>
+                    
+                    
+                </ul> 
+   
             </nav>
+        </header>
+
+
+
+
+        <section class="home">
+            <div class="home-content">
+                <h3>Hello Folks , It's Me</h3>
+                <h1><span>N</span>ANDA <span>G</span></h1>
+                <h3> And I'm a <span class="multiple-text"> </span></h3>
+                <p>Passionate about exploring IoT and a aspiring
+                    web developer.I’m a tech enthusiast and
+                     a very inquistive person to enrich myself with new technologies.</p>
+            </div>
+
+            <div class="home-img">
+                <img src="images/00.jpg" alt="">
+            </div>
+
+
+        </section>
+
+
+
+
             <div class="logo">
                 <img src="images/logo4.png" alt="Logo">
             </div>
-            <div class="header-text">
+            <!-- <div class="header-text">
                 <h1><span>N</span>ANDA'<span>S</span> <span>P</span>ORT<span>F</span>OLIO</h1>
-                <!-- Add the description below the header text -->
+                
                 <p class="summary">Welcome to my tech realm! <br><br>I'm <span>Nanda G</span>, a tech enthusiast, passionate IoT explorer <br> and an Aspiring Web developer.  <br>Quick learner with a passion for staying updated with the latest technologies.</p>
-            </div>
+            </div> -->
         </div>
     
     <div class="bottom">
@@ -113,6 +146,23 @@
     
     
 </body>
+
+<script src="script.js"></script>
+
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+
+<script>
+    var typed = new Typed(".multiple-text",{
+    strings:["Web Developer","IoT Explorer","Technophile"],
+    typeSpeed:100,
+    backSpeed:100,
+    backDelay:1000,
+    loop:true
+
+})
+</script>
 
 
 <script>

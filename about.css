@@ -5,6 +5,8 @@
   
 }
 
+
+
 body {
   display: flex;
   background-color: black;
@@ -13,6 +15,10 @@ body {
   height: 100vh;
   display: inline-block;
 }
+
+
+
+
 
 .aboutme {
   text-align: center;
@@ -153,6 +159,7 @@ nav ul li {
   display: inline-block;
   list-style: none;
   margin: 10px 20px;
+  font-weight: 700;
 }
 nav ul li a {
   color: #fff;
@@ -170,6 +177,15 @@ nav ul li a::after {
   bottom: -6px;
   transition: 0.5s;
 }
+
+
+nav ul li a.active1{
+  
+  color: #ff004f;
+
+
+}
+
 nav ul li a:hover::after {
   width: 100%;
 }
